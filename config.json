@@ -1,0 +1,14 @@
+{
+    "token": "OTc4MzM5ODA1NDk2NzUwMTUw.GM8Z8f.7_97VRHQl1nF8R1Y_zTd2obcV9rS9OREI68mG4",
+    "prefix": ".",
+    "coin" : "coin",
+    "dagpi": "MTYyNTQ1MTkyOA.O4RX75AkiIOeq5GEYFRqTRsX82MXkxd1.e4a469d7becd7096",
+    "mongoPath": "mongodb+srv://GoViper:GoViperUC123@cluster.sbavr.mongodb.net/TinyArcade?retryWrites=true&w=majority",
+    "access_token_key": "1473122033512837124-KNkS7lgW19AKgTUmgDyTn9eIJddabT",
+    "access_token_secret": "6Q7f3zMZXPfSkSZl3FSVr7vxXL7woeAQXnclTxHTiKGFm",
+    "consumer_key": "ftzX3tbaEkbhhW71HtCzHCeLj",
+    "consumer_secret": "2KyRsGSlscIqPrwWUFy369aDLchm3sVk4JzjUXsK0IsDg1zUEW",
+    "bearer_token": "AAAAAAAAAAAAAAAAAAAAAM9YcwEAAAAA93jkfBYFOTlQ%2BdkQTlQ534zdBM4%3DvqixSqdTyLa0cO8chXkCbQj0KFJuDm7xWv1kwNDWqTvEveEUFR",
+    "mainId" : "1473122033512837124",
+    "channelId" : "939994838072446976"
+}
