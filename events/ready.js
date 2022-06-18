@@ -7,6 +7,7 @@ const twitterSchema = require('../schemas/twitter-schema')
 const economy = require('../utils/economy')
 const invites = new Discord.Collection();
 const roleSchema = require('../schemas/role-schema')
+const likeSchema = require('../schemas/like-schema')
 client.on("ready", async () => {
 
     const arrayOfStatus = [
