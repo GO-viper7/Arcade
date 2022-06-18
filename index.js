@@ -37,11 +37,5 @@ process.on("multipleResolves", (type, promise, reason) => {
 
 
 
-const PORT = 3000 || process.env.PORT;
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
-});
-
 
 client.login(client.config.token);
