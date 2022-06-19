@@ -21,7 +21,7 @@ module.exports = {
         const guildId = message.guild.id
         const userId = target.id
 
-        const coins = await economy.getCoins(guildId, userId)
+        const coins = await economy.getCoins(userId)
 
         const embed = new MessageEmbed()
             .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145554923610/Purple_dance.png")

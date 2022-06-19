@@ -30,17 +30,14 @@ module.exports.addCoins = async (guildId, userId, OctaCreds) => {
     return result.OctaCreds
 } 
 
-module.exports.getCoins = async (guildId, userId) => {
-    const cachedValue = coinsCache[`${guildId}-${userId}`]
-    if (cachedValue) {
-        return cachedValue
-    }
+module.exports.getCoins = async (userId) => {
+    
 
     return await mongo().then(async (mongoose) => {
         try {
 
             const result = await profileSchema.findOne({
-                guildId,
+            
                 userId,
             })
 
@@ -51,13 +48,13 @@ module.exports.getCoins = async (guildId, userId) => {
             } else {
                 console.log('goin to save');
                 await new profileSchema({
-                    guildId,
+                 
                     userId,
                     OctaCreds,
                 }).save()
             }
 
-            coinsCache[`${guildId}-${userId}`] = OctaCreds
+           
 
             return OctaCreds
         } catch (err) {
