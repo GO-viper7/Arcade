@@ -56,7 +56,7 @@ module.exports = {
                     }
                 )
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061000876082/IMG_5521.webp")
+                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145789820998/Pink_Power_Mempo.png")
                 .setTimestamp()
                 .setFooter({ text: `Shop opened by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 
@@ -130,7 +130,7 @@ module.exports = {
                                 )
                                 .setColor("#FFFF00")
                                 .setTimestamp()
-                                .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061000876082/IMG_5521.webp")
+                                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145554923610/Purple_dance.png")
 
                             serverConfig.findOne({ guildId: message.guild.id }, async (err, config) => {
                                 if (config.shopLogs) {

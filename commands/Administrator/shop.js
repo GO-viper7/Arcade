@@ -51,7 +51,7 @@ module.exports = {
                     }
                 )
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061000876082/IMG_5521.webp")
+                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146486091786/Strike_the_pose.png")
                 .setTimestamp()
                 .setFooter({ text: `Shop opened by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 
@@ -124,7 +124,7 @@ module.exports = {
                             )
                             .setColor("#FFFF00")
                             .setTimestamp()
-                            .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061000876082/IMG_5521.webp")
+                            .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146028884029/Looking_up.png")
 
                         serverConfig.findOne({ guildId: message.guild.id }, async (err, config) => {
                             if (config.shopLogs) {

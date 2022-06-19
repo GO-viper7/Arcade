@@ -17,7 +17,7 @@ module.exports = {
             .setTitle("Economy Leaderboard Reset!")
             .setDescription("All players' in-game currency has been reset.")
             .setColor("#FFFF00")
-            .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061231579176/IMG_0097.gif")
+            .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146733522974/Dance_drop.png")
             .setTimestamp()
             .setFooter({ text: `Resetted by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 

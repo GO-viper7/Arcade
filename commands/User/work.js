@@ -24,7 +24,7 @@ module.exports = {
             if (workTimeout.has(message.author.id)) {
                 const tiredEmbed = new MessageEmbed()
                     .setColor('#FFFF00')
-                    .setThumbnail("https://cdn.discordapp.com/attachments/942755207748661248/946843553793982554/sussie_lol.gif")
+                    .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146486091786/Strike_the_pose.png")
                     .setDescription(`Don't work too much! Come back after \`${ms(workTimeout.get(message.author.id) - Date.now(), { long: true })}\`!`)
                     .setAuthor({ name: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
                 return message.reply({ embeds: [tiredEmbed] })
@@ -45,7 +45,7 @@ module.exports = {
                     .setAuthor({ name: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
                     .setDescription(`You worked as a ${jobs[Math.floor(Math.random() * jobs.length)]} and earned ${data.emote || config.emote}\`${amount} ${tBucks}\`!`)
                     .setColor("FFFF00")
-                    .setThumbnail("https://media.discordapp.net/attachments/945844991744426014/946512249659457566/farmer1_1.png?width=200&height=200")
+                    .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146733522974/Dance_drop.png")
 
 
                 return message.reply({ embeds: [embed] })

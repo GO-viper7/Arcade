@@ -75,7 +75,7 @@ module.exports = {
                         }
                     )
                     .setColor("#FFFF00")
-                    .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344061231579176/IMG_0097.gif")
+                    .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145269719060/Orange.png")
                     .setTimestamp()
                     .setFooter({ text: `Item added by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 

@@ -19,7 +19,7 @@ module.exports = {
             inventory.find(
                 { userId: member.id },
                 async (err, data) => {
-                    if (!data) return message.reply(`**Your inventory is empty!**`)
+                    if (data.length == 0) return message.reply(`**Your inventory is empty!**`)
                     var x = ''
                     data.forEach(k=> {
                        x+=`**Name:** ${k.name}\n**Category:** ${k.category}\n\n`

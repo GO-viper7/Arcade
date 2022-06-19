@@ -24,7 +24,7 @@ module.exports = {
         const coins = await economy.getCoins(guildId, userId)
 
         const embed = new MessageEmbed()
-            .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946512213806575636/creature_7_1.png")
+            .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145554923610/Purple_dance.png")
             .setAuthor({ name: target.tag, iconURL: target.displayAvatarURL() })
             .addFields(
                 {

@@ -37,7 +37,7 @@ module.exports = {
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL() })
                 .setTitle(`<:Bucks:946738019635957791> Top 10 Richest Members!`)
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/946251491981787236/946791150147227668/image_2022-02-25_185724-removebg-preview.png")
+                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146028884029/Looking_up.png")
                 .addFields(
                     {
                         name: `1 | ${client.users.cache.get(data[0].userId).tag}`,
@@ -66,7 +66,7 @@ module.exports = {
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL() })
                 .setTitle(`<:Bucks:946738019635957791> Top 10 Richest Members!`)
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/946251491981787236/946791150147227668/image_2022-02-25_185724-removebg-preview.png")
+                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145789820998/Pink_Power_Mempo.png")
                 .addFields(
                     {
                         name: `6 | ${client.users.cache.get(data[5].userId).tag}`,
