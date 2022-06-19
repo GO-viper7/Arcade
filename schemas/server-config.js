@@ -12,6 +12,10 @@ const serverConfig = mongoose.Schema({
     type: String,
     default: config.coin
   },
+  emote: {
+    type: String,
+    default: config.emote
+  },
   prefix: {
     type: String,
     default: config.prefix
