@@ -79,7 +79,7 @@ module.exports = {
                 })) {
                     interaction.reply({ content: `You've already bought/attempted to buy this item!`, ephemeral: true })
                 } else {
-                    const bal = await economy.getCoins(message.guild.id, interaction.user.id)
+                    const bal = await economy.getCoins( interaction.user.id)
                     const itemPrice = data.price
                     if (bal < itemPrice) return interaction.reply({ content: `You don't have enough ${tBucks} to buy this item!`, ephemeral: true })
                     inventory.findOne({ guildId: message.guild.id, userId: interaction.user.id }, async (err, bruh) => {

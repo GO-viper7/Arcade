@@ -33,8 +33,8 @@ module.exports = {
                 return message.reply("<:error:946775591460421683> : You cant play a game of tic-tac-toe against a bot.").catch((err) => { })
             }
 
-            const userBal = await economy.getCoins(message.guild.id, message.author.id)
-            const opponentBal = await economy.getCoins(message.guild.id, opponent.user.id)
+            const userBal = await economy.getCoins( message.author.id)
+            const opponentBal = await economy.getCoins( opponent.user.id)
 
             if (!amount) return message.reply(`<:error:946775591460421683> : Please specify an amount of ${tBucks} to bet.`).catch((err) => { })
             if (isNaN(amount)) return message.reply(`<:error:946775591460421683> : Please specify a valid amount of ${tBucks} to bet.`).catch((err) => { })

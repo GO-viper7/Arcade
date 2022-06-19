@@ -32,8 +32,8 @@ module.exports = {
             if (!amount) return message.reply("<:error:946775591460421683> : Please specify the amount to bet on this roll.")
             if (isNaN(amount)) return message.reply("<:error:946775591460421683> : Please specify a valid amount to bet on this roll.")
 
-            const userBal = await economy.getCoins(message.guild.id, message.author.id)
-            const memberBal = await economy.getCoins(message.guild.id, opponent.user.id)
+            const userBal = await economy.getCoins( message.author.id)
+            const memberBal = await economy.getCoins( opponent.user.id)
 
             if (amount > userBal) return message.reply(`<:error:946775591460421683> : You do not have enough ${tBucks} to bet on this roll.`)
             if (amount > memberBal) return message.reply(`<:error:946775591460421683> : The member you mentioned does not have enough ${tBucks} to bet on this roll.`)

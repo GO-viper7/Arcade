@@ -33,8 +33,8 @@ module.exports = {
             if (!amount) return message.reply(`<:error:946775591460421683> : Please specify an amount of ${tBucks} to bet on this coin flip.`)
             if (isNaN(amount)) return message.reply(`<:error:946775591460421683> : Please specify a valid amount of ${tBucks} to bet on this coin flip.`)
 
-            const userCoins = await economy.getCoins(message.guild.id, message.author.id)
-            const opponentCoins = await economy.getCoins(message.guild.id, opponent.id)
+            const userCoins = await economy.getCoins( message.author.id)
+            const opponentCoins = await economy.getCoins( opponent.id)
 
             if (amount > userCoins) return message.reply(`<:error:946775591460421683> : You do not have enough ${tBucks} to bet that much!`)
             if (amount > opponentCoins) return message.reply(`<:error:946775591460421683> : That member does not have enough ${tBucks} to bet that much!`)

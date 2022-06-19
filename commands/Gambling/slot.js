@@ -23,7 +23,7 @@ module.exports = {
             if (isNaN(args[0])) return message.channel.send(`You need to specify a valid amount of ${tBucks} to gamble!`)
             if (args[0] < 1) return message.channel.send(`You need to specify an amount of ${tBucks} to gamble!`)
 
-            const userBal = await economy.getCoins(message.guild.id, message.author.id)
+            const userBal = await economy.getCoins( message.author.id)
             if (args[0] > userBal) return message.channel.send(`You don't have enough ${tBucks} to gamble!`)
 
             const choices = ["🍇", "🍈", "🍉", "🍊", "🍋", "🍌", "🍒", "🍍", "🍎", "🍏", "🍑", "🍓"]

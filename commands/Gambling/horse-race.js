@@ -28,7 +28,7 @@ module.exports = {
             if (args[0] < 1 || args[0] > 5) return message.reply("You need to specify a valid horse number!")
             if (args[1] < 1) return message.reply(`You need to specify a valid amount of ${tBucks} to bet!`)
 
-            const userBal = await economy.getCoins(message.guild.id, message.author.id)
+            const userBal = await economy.getCoins( message.author.id)
             if (args[1] > userBal) return message.reply(`You don't have enough ${tBucks} to bet!`)
             const horse_number = parseInt(args[0])
             if (horse_number > 5) return message.reply("You need to specify a valid horse number from \`1-5\`!")
