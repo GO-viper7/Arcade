@@ -22,7 +22,7 @@ module.exports = {
                     if (!data) return message.reply(`**Your inventory is empty!**`)
                     var x = ''
                     data.forEach(k=> {
-                       x+=`Name: ${k.name}\nCategory: ${k.category}\n\n`
+                       x+=`**Name:** ${k.name}\n**Category:** ${k.category}\n\n`
                     })
 
 
@@ -32,7 +32,7 @@ module.exports = {
                                 .setTitle(`🛍️ ${member.tag}'s Inventory!`)
                                 .setDescription(x)
                                 .setColor("FFFF00")
-                                .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344182895767603/IMG_4665.gif")]
+                                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145269719060/Orange.png")]
                         }
                     )
                 }
