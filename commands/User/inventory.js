@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const inventory = require('../../schemas/inv-schema')
+const inventory = require('../../schemas/item-schema')
 const serverConfig = require("../../schemas/server-config")
 const config = require('../../config.json')
 
@@ -16,21 +16,21 @@ module.exports = {
 
             const member = message.mentions.users.first() || message.author
             const { guild } = message
-            inventory.findOne(
-                { guildId: guild.id, userId: member.id },
+            inventory.find(
+                { userId: member.id },
                 async (err, data) => {
                     if (!data) return message.reply(`**Your inventory is empty!**`)
-                    const mappedData = Object.keys(data.Inventory)
-                        .map((key) => {
-                            return { name: `<:purpleArrow:946751539341574174>${key}(s)`, value: `>>> ${data.Inventory[key]}` };
-                        })
+                    var x = ''
+                    data.forEach(k=> {
+                       x+=`Name: ${k.name}\nCategory: ${k.category}\n\n`
+                    })
 
 
                     message.reply(
                         {
                             embeds: [new Discord.MessageEmbed()
                                 .setTitle(`🛍️ ${member.tag}'s Inventory!`)
-                                .addFields(...mappedData)
+                                .setDescription(x)
                                 .setColor("FFFF00")
                                 .setThumbnail("https://cdn.discordapp.com/attachments/945844991744426014/946344182895767603/IMG_4665.gif")]
                         }
