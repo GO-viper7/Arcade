@@ -82,7 +82,7 @@ client.on("ready", async () => {
                         if (msg.author.bot) return
                         const selection = msg.content.toLowerCase();
                         if (selection === a.toLowerCase()) {
-                            channel.send({ content: `${msg.author} got it right! Their account has been deposited with  <:Coins:946757996166389810> \`${amount}\` ${tBucks}!` })
+                            channel.send({ content: `${msg.author} got it right! Their account has been deposited with  ${data.emote || config.emote} \`${amount}\` ${tBucks}!` })
                             await isAnswered.delete(initial.id)
                             gameCollector.stop()
                             economy.addCoins(guildId, msg.author.id, amount)

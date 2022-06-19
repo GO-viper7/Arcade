@@ -29,7 +29,7 @@ module.exports = {
             .addFields(
                 {
                     name: `Wallet`,
-                    value: `<:Coins:946757996166389810> ${coins} ${tBucks}`
+                    value: `${data.emote || config.emote} ${coins} ${tBucks}`
                 }
             )
             .setColor('#FFFF00')

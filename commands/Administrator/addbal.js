@@ -30,8 +30,8 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor({ name: member.user.tag, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setTitle(`<:Coins:946757996166389810> ${tBucks} Added!`)
-            .setDescription(`${member.user.tag} has been given <:Coins:946757996166389810>\`${amount} ${tBucks}\`!`)
+            .setTitle(`${data.emote || config.emote} ${tBucks} Added!`)
+            .setDescription(`${member.user.tag} has been given ${data.emote || config.emote}\`${amount} ${tBucks}\`!`)
             .setFooter({ text: `${tBucks} added by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
             .setTimestamp()
             .setColor("#FFFF00")

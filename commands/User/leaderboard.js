@@ -41,23 +41,23 @@ module.exports = {
                 .addFields(
                     {
                         name: `1 | ${client.users.cache.get(data[0].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[0].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[0].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `2 | ${client.users.cache.get(data[1].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[1].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[1].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `3 | ${client.users.cache.get(data[2].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[2].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[2].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `4 | ${client.users.cache.get(data[3].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[3].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[3].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `5 | ${client.users.cache.get(data[4].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[4].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[4].OctaCreds}\` ${tBucks}`,
                     }
                 )
                 .setTimestamp()
@@ -70,23 +70,23 @@ module.exports = {
                 .addFields(
                     {
                         name: `6 | ${client.users.cache.get(data[5].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[5].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[5].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `7 | ${client.users.cache.get(data[6].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[6].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[6].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `8 | ${client.users.cache.get(data[7].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[7].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[7].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `9 | ${client.users.cache.get(data[8].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[8].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[8].OctaCreds}\` ${tBucks}`,
                     },
                     {
                         name: `10 | ${client.users.cache.get(data[9].userId).tag}`,
-                        value: `<:Coins:946757996166389810> \`${data[9].OctaCreds}\` ${tBucks}`,
+                        value: `${data.emote || config.emote} \`${data[9].OctaCreds}\` ${tBucks}`,
                     }
                 )
 

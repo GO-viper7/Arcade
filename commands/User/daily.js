@@ -26,7 +26,7 @@ module.exports = {
 
             economy.addCoins(message.guild.id, message.author.id, amount)
 
-            return message.reply(`You received your daily ${tBucks}!\n\n<:Coins:946757996166389810> \`${amount} ${tBucks}\``)
+            return message.reply(`You received your daily ${tBucks}!\n\n${data.emote || config.emote} \`${amount} ${tBucks}\``)
         })
     }
 }

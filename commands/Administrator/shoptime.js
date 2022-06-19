@@ -47,7 +47,7 @@ module.exports = {
                         value: `\`${data.item}\``,
                     },
                     {
-                        name: "<:Coins:946757996166389810> Price",
+                        name: `${data.emote || config.emote} Price`,
                         value: `\`${data.price} ${tBucks}\``,
                     },
                     {
@@ -124,7 +124,7 @@ module.exports = {
                                         value: `\`${data.item}\``,
                                     },
                                     {
-                                        name: "<:Coins:946757996166389810> Price",
+                                        name: `${data.emote || config.emote} Price`,
                                         value: `\`${itemPrice} ${tBucks}\``,
                                     }
                                 )

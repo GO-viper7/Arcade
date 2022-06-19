@@ -96,70 +96,70 @@ module.exports = {
                         await clearInterval(interval)
                         if (horse_number === 1) {
                             await economy.addCoins(message.guild.id, message.author.id, amount * 5)
-                            await message.reply(`Horse 1 won the race! You won <:Coins:946757996166389810>\`${amount * 5} ${tBucks}!\``)
+                            await message.reply(`Horse 1 won the race! You won ${data.emote || config.emote}\`${amount * 5} ${tBucks}!\``)
                         } else {
                             await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                            await message.reply(`Horse 1 won the race! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                            await message.reply(`Horse 1 won the race! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                         }
                     } else if (length_2 <= 0) {
                         await clearInterval(interval)
                         if (horse_number === 2) {
                             await economy.addCoins(message.guild.id, message.author.id, amount * 5)
-                            await message.reply(`Horse 2 won the race! You won <:Coins:946757996166389810>\`${amount * 5} ${tBucks}!\``)
+                            await message.reply(`Horse 2 won the race! You won ${data.emote || config.emote}\`${amount * 5} ${tBucks}!\``)
                         } else {
                             await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                            await message.reply(`Horse 2 won the race! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                            await message.reply(`Horse 2 won the race! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                         }
                     } else if (length_3 <= 0) {
                         await clearInterval(interval)
                         if (horse_number === 3) {
                             await economy.addCoins(message.guild.id, message.author.id, amount * 5)
-                            await message.reply(`Horse 3 won the race! You won <:Coins:946757996166389810>\`${amount * 5} ${tBucks}!\``)
+                            await message.reply(`Horse 3 won the race! You won ${data.emote || config.emote}\`${amount * 5} ${tBucks}!\``)
                         } else {
                             await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                            message.reply(`Horse 3 won the race! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                            message.reply(`Horse 3 won the race! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                         }
                     } else if (length_4 <= 0) {
                         await clearInterval(interval)
                         if (horse_number === 4) {
                             await economy.addCoins(message.guild.id, message.author.id, amount * 5)
-                            await message.reply(`Horse 4 won the race! You won <:Coins:946757996166389810>\`${amount * 5} ${tBucks}!\``)
+                            await message.reply(`Horse 4 won the race! You won ${data.emote || config.emote}\`${amount * 5} ${tBucks}!\``)
                         } else {
                             await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                            message.reply(`Horse 4 won the race! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                            message.reply(`Horse 4 won the race! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                         }
                     } else if (length_5 <= 0) {
                         await clearInterval(interval)
                         if (horse_number === 5) {
                             await economy.addCoins(message.guild.id, message.author.id, amount * 5)
-                            await message.reply(`Horse 5 won the race! You won <:Coins:946757996166389810>\`${amount * 5} ${tBucks}!\``)
+                            await message.reply(`Horse 5 won the race! You won ${data.emote || config.emote}\`${amount * 5} ${tBucks}!\``)
                         } else {
                             await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                            message.reply(`Horse 5 won the race! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                            message.reply(`Horse 5 won the race! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                         }
                     } else if (length_6 <= 0) {
                         await clearInterval(interval)
                         await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        message.reply(`You predicted the wrong horse! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                        message.reply(`You predicted the wrong horse! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                     } else if (length_7 <= 0) {
                         await clearInterval(interval)
                         await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        message.reply(`You predicted the wrong horse! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                        message.reply(`You predicted the wrong horse! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                     }
                     else if (length_8 <= 0) {
                         await clearInterval(interval)
                         await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        message.reply(`You predicted the wrong horse! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                        message.reply(`You predicted the wrong horse! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                     }
                     else if (length_9 <= 0) {
                         await clearInterval(interval)
                         await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        message.reply(`You predicted the wrong horse! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                        message.reply(`You predicted the wrong horse! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                     }
                     else if (length_10 <= 0) {
                         await clearInterval(interval)
                         await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        message.reply(`You predicted the wrong horse! You lost <:Coins:946757996166389810>\`-${amount} ${tBucks}!\``)
+                        message.reply(`You predicted the wrong horse! You lost ${data.emote || config.emote}\`-${amount} ${tBucks}!\``)
                     }
 
                     embed.setDescription(`Place your bets on the horse!\n\n1. ${flag} ${"-".repeat(length_1)}${horse_1}\n\n2. ${flag} ${"-".repeat(length_2)}${horse_2}\n\n3. ${flag} ${"-".repeat(length_3)}${horse_3}\n\n4. ${flag} ${"-".repeat(length_4)}${horse_4}\n\n5. ${flag} ${length_5>=0 ? "-".repeat(length_5) : "-".repeat(0)}${horse_5}`)

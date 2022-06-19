@@ -43,7 +43,7 @@ module.exports = {
 
                 const embed = new MessageEmbed()
                     .setAuthor({ name: message.author.tag, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
-                    .setDescription(`You worked as a ${jobs[Math.floor(Math.random() * jobs.length)]} and earned <:Coins:946757996166389810>\`${amount} ${tBucks}\`!`)
+                    .setDescription(`You worked as a ${jobs[Math.floor(Math.random() * jobs.length)]} and earned ${data.emote || config.emote}\`${amount} ${tBucks}\`!`)
                     .setColor("FFFF00")
                     .setThumbnail("https://media.discordapp.net/attachments/945844991744426014/946512249659457566/farmer1_1.png?width=200&height=200")
 

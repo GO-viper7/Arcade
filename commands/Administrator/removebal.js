@@ -29,8 +29,8 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor({ name: member.user.tag, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
-            .setTitle(`<:Coins:946757996166389810> ${tBucks} Removed!`)
-            .setDescription(`<:Coins:946757996166389810> \`${amount} ${tBucks}\` has been removed from ${member.user.tag}!`)
+            .setTitle(`${data.emote || config.emote} ${tBucks} Removed!`)
+            .setDescription(`${data.emote || config.emote} \`${amount} ${tBucks}\` has been removed from ${member.user.tag}!`)
             .setFooter({ text: `${tBucks} removed by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
             .setTimestamp()
             .setColor("#FFFF00")

@@ -40,7 +40,7 @@ module.exports = {
                     const jackpotEmbed = new MessageEmbed()
                         .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                         .setTitle("Jackpot!")
-                        .setDescription(`7️⃣ | 7️⃣ | 7️⃣\n\nYou won the jackpot! You won <:Coins:946757996166389810>\`${args[0] * 10} ${tBucks}\`!`)
+                        .setDescription(`7️⃣ | 7️⃣ | 7️⃣\n\nYou won the jackpot! You won ${data.emote || config.emote}\`${args[0] * 10} ${tBucks}\`!`)
                         .setColor("FFFF00")
                         .setTimestamp()
 
@@ -50,7 +50,7 @@ module.exports = {
                     const winnerEmbed = new MessageEmbed()
                         .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                         .setTitle("Winner!")
-                        .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won <:Coins:946757996166389810>\`${args[0] * 2} ${tBucks}\`!`)
+                        .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won ${data.emote || config.emote}\`${args[0] * 2} ${tBucks}\`!`)
                         .setColor("FFFF00")
                         .setTimestamp()
 
@@ -61,7 +61,7 @@ module.exports = {
                 const winnerEmbed = new MessageEmbed()
                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                     .setTitle("Winner!")
-                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won <:Coins:946757996166389810>\`${args[0]} ${tBucks}\`!`)
+                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won ${data.emote || config.emote}\`${args[0]} ${tBucks}\`!`)
                     .setColor("FFFF00")
                     .setTimestamp()
 
@@ -71,7 +71,7 @@ module.exports = {
                 const winnerEmbed = new MessageEmbed()
                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                     .setTitle("Winner!")
-                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won <:Coins:946757996166389810>\`${args[0]} ${tBucks}\`!`)
+                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won ${data.emote || config.emote}\`${args[0]} ${tBucks}\`!`)
                     .setColor("FFFF00")
                     .setTimestamp()
 
@@ -81,7 +81,7 @@ module.exports = {
                 const winnerEmbed = new MessageEmbed()
                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                     .setTitle("Winner!")
-                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won <:Coins:946757996166389810>\`${args[0]} ${tBucks}\`!`)
+                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou won ${data.emote || config.emote}\`${args[0]} ${tBucks}\`!`)
                     .setColor("FFFF00")
                     .setTimestamp()
 
@@ -91,7 +91,7 @@ module.exports = {
                 const loserEmbed = new MessageEmbed()
                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                     .setTitle("Loser")
-                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou lost <:Coins:946757996166389810>\`-${args[0]} ${tBucks}\`!`)
+                    .setDescription(`${selection_1} | ${selection_2} | ${selection_3}\n\nYou lost ${data.emote || config.emote}\`-${args[0]} ${tBucks}\`!`)
                     .setColor("FFFF00")
                     .setTimestamp()
 

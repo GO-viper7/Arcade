@@ -115,7 +115,7 @@ module.exports = {
                                 const winEmbed = new MessageEmbed()
                                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                                     .setTitle("Coin Flip!")
-                                    .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n<:Coins:946757996166389810> \`${amount}\` ${tBucks} have been added to ${message.author}'s account and <:Coins:946757996166389810> \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
+                                    .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been added to ${message.author}'s account and ${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
                                     .setColor("#FFFF00")
                                     .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 
@@ -129,7 +129,7 @@ module.exports = {
                                 const loseEmbed = new MessageEmbed()
                                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                                     .setTitle("Coin Flip!")
-                                    .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n<:Coins:946757996166389810> \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and <:Coins:946757996166389810> \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
+                                    .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and ${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
                                     .setColor("#FFFF00")
                                     .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 
@@ -145,7 +145,7 @@ module.exports = {
                                 const winEmbed = new MessageEmbed()
                                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                                     .setTitle("Coin Flip!")
-                                    .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n<:Coins:946757996166389810> \`${amount}\`  ${tBucks} have been added to ${message.author}'s account and <:Coins:946757996166389810> \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
+                                    .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${message.author}'s account and ${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
                                     .setColor("#FFFF00")
                                     .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 
@@ -159,7 +159,7 @@ module.exports = {
                                 const loseEmbed = new MessageEmbed()
                                     .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                                     .setTitle("Coin Flip!")
-                                    .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n<:Coins:946757996166389810> \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and <:Coins:946757996166389810> \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
+                                    .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and ${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
                                     .setColor("#FFFF00")
                                     .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
 

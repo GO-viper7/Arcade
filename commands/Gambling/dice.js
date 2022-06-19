@@ -102,11 +102,11 @@ module.exports = {
                                 },
                                 {
                                     name: `${message.author.tag} won:`,
-                                    value: `<:Coins:946757996166389810> \`${amount * 2} ${tBucks}\``
+                                    value: `${data.emote || config.emote} \`${amount * 2} ${tBucks}\``
                                 },
                                 {
                                     name: `${opponent.user.tag} lost:`,
-                                    value: `<:Coins:946757996166389810> \`-${amount} ${tBucks}\``,
+                                    value: `${data.emote || config.emote} \`-${amount} ${tBucks}\``,
                                     inline: true
                                 }
                             )
@@ -137,11 +137,11 @@ module.exports = {
                                 },
                                 {
                                     name: `${message.author.tag} lost:`,
-                                    value: `<:Coins:946757996166389810> \`-${amount} ${tBucks}\``
+                                    value: `${data.emote || config.emote} \`-${amount} ${tBucks}\``
                                 },
                                 {
                                     name: `${opponent.user.tag} won:`,
-                                    value: `<:Coins:946757996166389810> \`${amount * 2} ${tBucks}\``,
+                                    value: `${data.emote || config.emote} \`${amount * 2} ${tBucks}\``,
                                     inline: true
                                 }
                             )

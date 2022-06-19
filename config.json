@@ -2,6 +2,7 @@
     "token": "OTc4MzM5ODA1NDk2NzUwMTUw.GM8Z8f.7_97VRHQl1nF8R1Y_zTd2obcV9rS9OREI68mG4",
     "prefix": ".",
     "coin" : "coin",
+    "emote" : "<:coin:987970492084396032>",
     "dagpi": "MTYyNTQ1MTkyOA.O4RX75AkiIOeq5GEYFRqTRsX82MXkxd1.e4a469d7becd7096",
     "mongoPath": "mongodb+srv://GoViper:GoViperUC123@cluster.sbavr.mongodb.net/TinyArcade?retryWrites=true&w=majority",
     "access_token_key": "1473122033512837124-KNkS7lgW19AKgTUmgDyTn9eIJddabT",
