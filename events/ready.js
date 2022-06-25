@@ -96,6 +96,6 @@ client.on("ready", async () => {
   }
   setInterval(() => {
     func()
-  }, 10000)
+  }, 60000)
     
 })
