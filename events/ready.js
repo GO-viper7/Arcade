@@ -40,12 +40,12 @@ client.on("ready", async () => {
   func = () =>{
     twitterSchema.find({}, (err, twits) => {
       twits.forEach(elem => {
-        var params = {user_id: elem.twitter, count: 100};
+        var params = {user_id: elem.twitter, count: 200};
         var i =0
         cli.get('favorites/list', params,  async function(error, tweets, response) {
           if (!error) {
               tweets.forEach(x => {
-                if (params.user_id === "1473122033512837124" ) {
+                if (params.user_id === "2692382134" ) {
                   console.log(`${i} -------> ${tweets[i].text}`)
                   i++
                 }
