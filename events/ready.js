@@ -40,11 +40,15 @@ client.on("ready", async () => {
   func = () =>{
     twitterSchema.find({}, (err, twits) => {
       twits.forEach(elem => {
-        var params = {user_id: elem.twitter};
+        var params = {user_id: elem.twitter, count: 100};
+        var i =0
         cli.get('favorites/list', params,  async function(error, tweets, response) {
           if (!error) {
-            //console.log(tweets)
               tweets.forEach(x => {
+                // if (params.user_id === "1473122033512837124" ) {
+                //   console.log(`${i} -------> ${tweets[i].text}`)
+                //   i++
+                // }
                   if(x.user.id==config.mainId) {
                     likeSchema.findOne({userId: elem.twitter,  tweetId: x.id}, async (err, data) => {
                       if (data == undefined) {
@@ -67,7 +71,7 @@ client.on("ready", async () => {
                        
                         .setTimestamp('timestamp')
                         //console.log(client.channels)
-                        client.channels.cache.get(config.channelId).send({embeds: [embed]});
+                        client.channels.cache.get(config.channelId).send({content: `<@${elem.id}>`, embeds: [embed]});
                         await economy.addCoins(elem.guildId, elem.userId, 300)
                        
                         await new likeSchema({
@@ -79,7 +83,8 @@ client.on("ready", async () => {
                     })
                    
                 }
-              })
+              })  
+              i=0
           }else {
             //
           }
