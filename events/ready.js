@@ -45,10 +45,10 @@ client.on("ready", async () => {
         cli.get('favorites/list', params,  async function(error, tweets, response) {
           if (!error) {
               tweets.forEach(x => {
-                // if (params.user_id === "1473122033512837124" ) {
-                //   console.log(`${i} -------> ${tweets[i].text}`)
-                //   i++
-                // }
+                if (params.user_id === "1473122033512837124" ) {
+                  console.log(`${i} -------> ${tweets[i].text}`)
+                  i++
+                }
                   if(x.user.id==config.mainId) {
                     likeSchema.findOne({userId: elem.twitter,  tweetId: x.id}, async (err, data) => {
                       if (data == undefined) {
@@ -71,7 +71,7 @@ client.on("ready", async () => {
                        
                         .setTimestamp('timestamp')
                         //console.log(client.channels)
-                        client.channels.cache.get(config.channelId).send({content: `<@${elem.id}>`, embeds: [embed]});
+                        client.channels.cache.get(config.channelId).send({content: `<@${elem.userId}>`, embeds: [embed]});
                         await economy.addCoins(elem.guildId, elem.userId, 300)
                        
                         await new likeSchema({
