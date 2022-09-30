@@ -57,7 +57,7 @@ module.exports = {
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                 .setTitle("Coin Flip!")
                 .setDescription(`${message.author.tag} has challenged ${opponent.user.tag} to a coin flip!`)
-                .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                .setFooter({ text: `Powered by Limbo Labs` })
                 .setColor("#FFFF00")
 
             const initialMessage = await message.reply({ embeds: [initalEmbed], components: [inviterow] })
@@ -83,7 +83,7 @@ module.exports = {
                         .setTitle("Coin Flip!")
                         .setDescription(`${opponent} - Choose your side!`)
                         .setColor("#FFFF00")
-                        .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setFooter({ text: `Powered by Limbo Labs` })
 
                     const choiceRow = new MessageActionRow().addComponents(
                         new MessageButton()
@@ -117,7 +117,7 @@ module.exports = {
                                     .setTitle("Coin Flip!")
                                     .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been added to ${message.author}'s account and ${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
                                     .setColor("#FFFF00")
-                                    .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                                    .setFooter({ text: `Powered by Limbo Labs` })
 
                                 choiceRow.components[0].setStyle("PRIMARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("SECONDARY").setDisabled(true)
@@ -131,7 +131,7 @@ module.exports = {
                                     .setTitle("Coin Flip!")
                                     .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and ${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
                                     .setColor("#FFFF00")
-                                    .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                                    .setFooter({ text: `Powered by Limbo Labs` })
 
                                 choiceRow.components[0].setStyle("PRIMARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("SECONDARY").setDisabled(true)
@@ -147,7 +147,7 @@ module.exports = {
                                     .setTitle("Coin Flip!")
                                     .setDescription(`The outcome was \`Tails\`!\n\n${opponent.user.tag} won and ${message.author.tag} lost the coin flip!\n\n${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${message.author}'s account and ${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${opponent}'s account.`)
                                     .setColor("#FFFF00")
-                                    .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                                    .setFooter({ text: `Powered by Limbo Labs` })
 
                                 choiceRow.components[0].setStyle("SECONDARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("PRIMARY").setDisabled(true)
@@ -161,7 +161,7 @@ module.exports = {
                                     .setTitle("Coin Flip!")
                                     .setDescription(`The outcome was \`Heads\`!\n\n${opponent.user.tag} lost and ${message.author.tag} won the coin flip!\n\n${data.emote || config.emote} \`${amount}\` ${tBucks} have been removed from ${message.author}'s account and ${data.emote || config.emote} \`${amount}\`  ${tBucks} have been added to ${opponent}'s account.`)
                                     .setColor("#FFFF00")
-                                    .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                                    .setFooter({ text: `Powered by Limbo Labs` })
 
                                 choiceRow.components[0].setStyle("SECONDARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("PRIMARY").setDisabled(true)
@@ -177,7 +177,7 @@ module.exports = {
                         .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                         .setTitle("Coin Flip Declined!")
                         .setDescription(`${opponent.user.tag} has declined the coin flip!`)
-                        .setFooter({ text: `Coin flip requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setFooter({ text: `Powered by Limbo Labs` })
                         .setColor("#FFFF00")
 
                     await inviteCollector.stop()

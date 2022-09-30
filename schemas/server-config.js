@@ -41,7 +41,43 @@ const serverConfig = mongoose.Schema({
   },
   userChannel: {
     type: String,
-  }
+  },
+  rpsLimit: {
+    type: String,
+  },
+  slotsLimit: {
+    type: String,
+  },
+  horseLimit: {
+    type: String,
+  },
+  daily: {
+    type: String,
+  },
+  chatCoins: {
+    type: String,
+  },
+  chatTimeout: {
+    type: String,
+  },
+  blacklistChannels: {
+    type: Array,
+  },
+  minvctime: {
+    type: String,
+  },
+  minvccoins: {
+    type: String,
+  },
+  pertimevctime: {
+    type: String,
+  },
+  pertimevccoins: {
+    type: String,
+  },
+  maxvctime: {
+    type: String,
+  },
 })
 
 module.exports = mongoose.model('server-config', serverConfig)

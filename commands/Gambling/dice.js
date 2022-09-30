@@ -9,7 +9,7 @@ module.exports = {
     usage: "[member] [amount]",
     run: async (client, message, args) => {
         let tBucks;
-    
+
         serverConfig.findOne({ guildId: message.guild.id }, async (err, data) => {
             if (data) {
                 tBucks = data.coin;
@@ -32,8 +32,8 @@ module.exports = {
             if (!amount) return message.reply("<:error:946775591460421683> : Please specify the amount to bet on this roll.")
             if (isNaN(amount)) return message.reply("<:error:946775591460421683> : Please specify a valid amount to bet on this roll.")
 
-            const userBal = await economy.getCoins( message.author.id)
-            const memberBal = await economy.getCoins( opponent.user.id)
+            const userBal = await economy.getCoins(message.author.id)
+            const memberBal = await economy.getCoins(opponent.user.id)
 
             if (amount > userBal) return message.reply(`<:error:946775591460421683> : You do not have enough ${tBucks} to bet on this roll.`)
             if (amount > memberBal) return message.reply(`<:error:946775591460421683> : The member you mentioned does not have enough ${tBucks} to bet on this roll.`)
@@ -56,7 +56,7 @@ module.exports = {
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                 .setTitle("<a:dice_rolling:946769669329653800> Die Roll!")
                 .setDescription(`${message.author.tag} has challenged ${opponent.user.tag} to a Die Roll!`)
-                .setFooter({ text: `Die Roll requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                .setFooter({ text: `Powered by Limbo Labs` })
                 .setColor("#FFFF00")
 
             const initialMessage = await message.reply({ embeds: [initalEmbed], components: [inviterow] })
@@ -112,6 +112,7 @@ module.exports = {
                             )
                             .setColor("#FFFF00")
                             .setTimestamp()
+                            .setFooter({ text: `Powered by Limbo Labs` })
 
                         await inviterow.components[0].setDisabled(true)
                         await inviterow.components[1].setDisabled(true)
@@ -147,6 +148,7 @@ module.exports = {
                             )
                             .setColor("#FFFF00")
                             .setTimestamp()
+                            .setFooter({ text: `Powered by Limbo Labs` })
 
                         await inviterow.components[0].setDisabled(true)
                         await inviterow.components[1].setDisabled(true)
@@ -174,6 +176,7 @@ module.exports = {
                             )
                             .setColor("#FFFF00")
                             .setTimestamp()
+                            .setFooter({ text: `Powered by Limbo Labs` })
 
                         await inviterow.components[0].setDisabled(true)
                         await inviterow.components[1].setDisabled(true)
@@ -184,7 +187,7 @@ module.exports = {
                         .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL({ dynamic: true }) })
                         .setTitle("<a:dice_rolling:946769669329653800> Die Roll Declined!")
                         .setDescription(`${opponent.user.tag} has declined the Die Roll!`)
-                        .setFooter({ text: `Die Roll requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setFooter({ text: `Powered by Limbo Labs` })
                         .setColor("#FFFF00")
 
                     await inviteCollector.stop()

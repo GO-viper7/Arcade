@@ -72,7 +72,7 @@ module.exports = {
                                 }
                             )
                             .setColor("FFFF00")
-                            .setFooter({ text: `Requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                            .setFooter({ text: `Powered by Limbo Labs` })
 
                         let maxAttempts = 30;
                         const amount = Math.floor((Math.random() * 100) + 50)

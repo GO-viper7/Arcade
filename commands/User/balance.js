@@ -10,33 +10,34 @@ module.exports = {
     usage: "<member>",
     run: async (client, message, args) => {
         let tBucks;
-    serverConfig.findOne({guildId: message.guild.id}, async (err, data) => {
-        if (data) {
-            tBucks = data.coin;
-        } else {
-            tBucks = config.coin;
-        }
-        const target = message.mentions.users.first() || message.author
+        serverConfig.findOne({ guildId: message.guild.id }, async (err, data) => {
+            if (data) {
+                tBucks = data.coin;
+            } else {
+                tBucks = config.coin;
+            }
+            const target = message.mentions.users.first() || message.author
 
-        const guildId = message.guild.id
-        const userId = target.id
+            const guildId = message.guild.id
+            const userId = target.id
 
-        const coins = await economy.getCoins(userId)
+            const coins = await economy.getCoins(userId)
 
-        const embed = new MessageEmbed()
-            .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145554923610/Purple_dance.png")
-            .setAuthor({ name: target.tag, iconURL: target.displayAvatarURL() })
-            .addFields(
-                {
-                    name: `Wallet`,
-                    value: `${data.emote || config.emote} ${coins} ${tBucks}`
-                }
-            )
-            .setColor('#FFFF00')
-            .setTimestamp()
+            const embed = new MessageEmbed()
+                .setThumbnail("attachment://logo.png")
+                .setAuthor({ name: target.tag, iconURL: target.displayAvatarURL() })
+                .addFields(
+                    {
+                        name: `Wallet`,
+                        value: `${data.emote || config.emote} ${coins} ${tBucks}`
+                    }
+                )
+                .setColor('#FFFF00')
+                .setTimestamp()
+                .setFooter({ text: "Powered by Limbo Labs" })
 
 
-        message.reply({ embeds: [embed] })
-            })
+            message.reply({ embeds: [embed], files: ["./logo.png"] })
+        })
     },
 }

@@ -110,7 +110,7 @@ module.exports = {
                 .setTitle("Tic-Tac-Toe Game!")
                 .setDescription(`**${message.author.tag} :vs: ${opponent.user.tag}**`)
                 .setColor("FFFF00")
-                .setFooter({ text: `Game requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                .setFooter({ text: `Powered by Limbo Labs` })
 
             const initial = await message.reply({ embeds: [embed], components: [new1, new2, new3] }).catch((err) => { })
 

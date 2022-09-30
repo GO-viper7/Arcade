@@ -35,9 +35,9 @@ module.exports = {
 
             const embed = new MessageEmbed()
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL() })
-                .setTitle(`<:Bucks:946738019635957791> Top 10 Richest Members!`)
+                .setTitle(`Top 10 Richest Members!`)
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986146028884029/Looking_up.png")
+                .setThumbnail("attachment://logo.png")
                 .addFields(
                     {
                         name: `1 | ${client.users.cache.get(data[0].userId).tag}`,
@@ -61,12 +61,15 @@ module.exports = {
                     }
                 )
                 .setTimestamp()
+                .setFooter({ text: "Powered by Limbo Labs" })
 
             const embed_2 = new MessageEmbed()
                 .setAuthor({ name: message.guild.name, iconURL: message.guild.iconURL() })
-                .setTitle(`<:Bucks:946738019635957791> Top 10 Richest Members!`)
+                .setTitle(`Top 10 Richest Members!`)
                 .setColor("#FFFF00")
-                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145789820998/Pink_Power_Mempo.png")
+                .setFooter({ text: "Powered by Limbo Labs" })
+                .setTimestamp()
+                .setThumbnail("attachment://logo.png")
                 .addFields(
                     {
                         name: `6 | ${client.users.cache.get(data[5].userId).tag}`,
@@ -103,7 +106,7 @@ module.exports = {
             )
 
 
-            const initial = await message.reply({ embeds: [embed], components: [row] })
+            const initial = await message.reply({ embeds: [embed], components: [row], files: ["./logo.png"] })
 
             const filter = (interaction) => {
                 if (interaction.user.id === message.author.id) return true;
@@ -123,11 +126,11 @@ module.exports = {
                 if (interaction.customId === "back") {
                     row.components[0].setDisabled(true)
                     row.components[1].setDisabled(false)
-                    interaction.update({ embeds: [embed], components: [row] })
+                    interaction.update({ embeds: [embed], components: [row], files: ["./logo.png"] })
                 } else if (interaction.customId === "forward") {
                     row.components[1].setDisabled(true)
                     row.components[0].setDisabled(false)
-                    interaction.update({ embeds: [embed_2], components: [row] })
+                    interaction.update({ embeds: [embed_2], components: [row], files: ["./logo.png"] })
                 }
             })
         })

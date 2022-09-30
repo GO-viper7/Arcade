@@ -72,13 +72,13 @@ module.exports = {
                         .addFields(
                             {
                                 name: `Categories:`,
-                                value: `**• Admin\n  • Bot\n  • Gambling \n  • Games \n  • Trivia \n  • User**`
+                                value: `**• Admin\n  • Bot\n  • Gambling \n  • User**`
 
                             },
                      
                         )
                         .setColor("FFFF00")
-                        .setFooter({ text: `Help requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setFooter({ text: `Powered by Limbo Labs` })
 
                     const components = (state) =>
 
@@ -212,8 +212,7 @@ module.exports = {
                                     .addFields(categories)
                                     .setFooter(
                                         {
-                                            text: `Requested by ${message.author.tag}`,
-                                            iconURL: message.author.displayAvatarURL({ dynamic: true })
+                                            text: `Powered by Limbo Labs`
                                         }
                                     )
                                     .setTimestamp()
@@ -296,8 +295,7 @@ module.exports = {
                             )
                             .setFooter(
                                 {
-                                    text: `Requested by ${message.author.tag}`,
-                                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                                    text: `Powered by Limbo Labs`
                                 }
                             )
                             .setTimestamp()
@@ -354,7 +352,7 @@ module.exports = {
                         .addFields(
                             {
                                 name: `Categories:`,
-                                value: ` • Admin\n  • Bot\n  • Gambling \n  • Games \n  • Trivia \n  • User**`
+                                value: ` • Admin\n  • Bot\n  • Gambling \n  • User**`
 
                             },
                             {
@@ -363,7 +361,7 @@ module.exports = {
                             }
                         )
                         .setColor("FFFF00")
-                        .setFooter({ text: `Help requested by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+                        .setFooter({ text: `Powered by Limbo Labs` })
 
                     const components = (state) =>
 
@@ -496,8 +494,7 @@ module.exports = {
                                     .addFields(categories)
                                     .setFooter(
                                         {
-                                            text: `Requested by ${message.author.tag}`,
-                                            iconURL: message.author.displayAvatarURL({ dynamic: true })
+                                            text: `Powered by Limbo Labs`
                                         }
                                     )
                                     .setTimestamp()
@@ -577,8 +574,7 @@ module.exports = {
                             )
                             .setFooter(
                                 {
-                                    text: `Requested by ${message.author.tag}`,
-                                    iconURL: message.author.displayAvatarURL({ dynamic: true })
+                                    text: `Powered by Limbo Labs`
                                 }
                             )
                             .setTimestamp()

@@ -3,6 +3,7 @@ const client = require("../index");
 const ms = require("ms")
 const Timeout = new Collection()
 const serverConfig = require("../schemas/server-config");
+const profileSchema = require("../schemas/profile-schema");
 
 client.on("messageCreate", async (message) => {
 
@@ -11,6 +12,19 @@ client.on("messageCreate", async (message) => {
 
   serverConfig.findOne({ guildId: message.guildId }, async (err, data) => {
     if (data) {
+      profileSchema.findOne({ userId: message.author.id}, async (err, data) => {
+        if (!data) {
+          new profileSchema({
+            guildId: message.guild.id,
+            userId: message.author.id
+          }).save()
+        } else {
+          if (!data.guildId) {
+            data.guildId = message.guild.id
+            await profileSchema.findOneAndUpdate({ userId: message.author.id }, data)
+          }
+        }
+      })
       if (data.prefix) {
         prefix = data.prefix
 

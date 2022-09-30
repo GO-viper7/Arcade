@@ -31,7 +31,7 @@ module.exports = {
             .setAuthor({ name: member.user.tag, iconURL: member.user.displayAvatarURL({ dynamic: true }) })
             .setTitle(`${data.emote || config.emote} ${tBucks} Removed!`)
             .setDescription(`${data.emote || config.emote} \`${amount} ${tBucks}\` has been removed from ${member.user.tag}!`)
-            .setFooter({ text: `${tBucks} removed by ${message.author.tag}`, iconURL: message.author.displayAvatarURL({ dynamic: true }) })
+            .setFooter({ text: `Powered by Limbo Labs` })
             .setTimestamp()
             .setColor("#FFFF00")
 

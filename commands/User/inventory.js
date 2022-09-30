@@ -32,7 +32,8 @@ module.exports = {
                                 .setTitle(`🛍️ ${member.tag}'s Inventory!`)
                                 .setDescription(x)
                                 .setColor("FFFF00")
-                                .setThumbnail("https://cdn.discordapp.com/attachments/985965538217984022/985986145269719060/Orange.png")]
+                                .setThumbnail("attachment://logo.png")],
+                            files: ["./logo.png"]
                         }
                     )
                 }

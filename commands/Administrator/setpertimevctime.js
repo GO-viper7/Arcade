@@ -1,33 +1,33 @@
 const serverConfig = require("../../schemas/server-config")
 const config = require('../../config.json')
+const ms = require("ms")
 
 module.exports = {
-    name: "setshoplogs",
-    description: "Sets the shop logs channel.",
-    usage: "<channel> or <channelid>",
+    name: "setpertimevctime",
+    description: "Sets the per time earning of vc time",
+    usage: "<coin-name>",
     run: async (client, message, args) => {
-        let tBucks;
-
         if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:error:946775591460421683> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
 
         const params = {
             guildId: message.guild.id
         }
 
-        const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
+        const pre = ms(args[0]);
 
-        if (!channel) return message.reply("<:error:946775591460421683> : Please mention a channel or the channel ID to configure the shop logs in.")
+        if (!pre) return message.reply("<:error:946775591460421683> : Please mention a time for per time earning coins")
         serverConfig.findOne(params, async (err, data) => {
             if (data) {
-                data.shopLogs = channel.id
+                data.pertimevctime = pre
                 await serverConfig.findOneAndUpdate(params, data)
 
-                message.reply(`The channel for the shop logs has been set to: ${channel}.\n\nIf you wish to change the shop logs channel, please run this command again.`)
+                message.reply(`The minimum VC time has been changed to ${args[0]}`)
             } else {
                 new serverConfig({
                     guildId: message.guild.id,
-                    shopLogs: channel.id
+                    pertimevctime: pre
                 }).save()
+                message.reply(`The minimum VC time has been changed to ${args[0]}`)
             }
         })
     }
