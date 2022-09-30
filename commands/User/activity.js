@@ -1,9 +1,9 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "act",
-  aliases: ["aliase"],
-  description: "description",
+  name: "activity",
+  aliases: ["act"],
+  description: "Shows activity of a member",
   category: "category",
   guildOnly: true,
   memberpermissions:"VIEW_CHANNEL",

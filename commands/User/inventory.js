@@ -22,7 +22,7 @@ module.exports = {
                     if (data.length == 0) return message.reply(`**Your inventory is empty!**`)
                     var x = ''
                     data.forEach(k=> {
-                       x+=`**Name:** ${k.name}\n**Category:** ${k.category}\n\n`
+                       x+=`**Name:** ${k.itemName}\n**Category:** ${k.category}\n\n`
                     })
 
 
