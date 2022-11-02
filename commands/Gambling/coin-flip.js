@@ -23,21 +23,21 @@ module.exports = {
             const opponent = message.mentions.members.first()
             const amount = parseInt(args[1])
 
-            if (!opponent) return message.reply("<:error:946775591460421683> : Please specify a valid member!")
+            if (!opponent) return message.reply("<:warning:1037486469620695100> : Please specify a valid member!")
             if (opponent.user.id === message.author.id) {
-                return message.reply("<:error:946775591460421683> : You can't flip a coin against yourself.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You can't flip a coin against yourself.").catch((err) => { })
             }
             if (opponent.user.bot) {
-                return message.reply("<:error:946775591460421683> : You cant flip a coin against a bot.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You cant flip a coin against a bot.").catch((err) => { })
             }
-            if (!amount) return message.reply(`<:error:946775591460421683> : Please specify an amount of ${tBucks} to bet on this coin flip.`)
-            if (isNaN(amount)) return message.reply(`<:error:946775591460421683> : Please specify a valid amount of ${tBucks} to bet on this coin flip.`)
+            if (!amount) return message.reply(`<:warning:1037486469620695100> : Please specify an amount of ${tBucks} to bet on this coin flip.`)
+            if (isNaN(amount)) return message.reply(`<:warning:1037486469620695100> : Please specify a valid amount of ${tBucks} to bet on this coin flip.`)
 
             const userCoins = await economy.getCoins( message.author.id)
             const opponentCoins = await economy.getCoins( opponent.id)
 
-            if (amount > userCoins) return message.reply(`<:error:946775591460421683> : You do not have enough ${tBucks} to bet that much!`)
-            if (amount > opponentCoins) return message.reply(`<:error:946775591460421683> : That member does not have enough ${tBucks} to bet that much!`)
+            if (amount > userCoins) return message.reply(`<:warning:1037486469620695100> : You do not have enough ${tBucks} to bet that much!`)
+            if (amount > opponentCoins) return message.reply(`<:warning:1037486469620695100> : That member does not have enough ${tBucks} to bet that much!`)
 
             const inviterow = new MessageActionRow().addComponents(
                 new MessageButton()
