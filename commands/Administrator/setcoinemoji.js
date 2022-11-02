@@ -6,7 +6,7 @@ module.exports = {
     description: "Sets the emoji of the coin.",
     usage: "<emoji-name>",
     run: async (client, message, args) => {
-        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:error:946775591460421683> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
+        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:warning:1037486469620695100> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
 
         const params = {
             guildId: message.guild.id
@@ -14,7 +14,7 @@ module.exports = {
 
         const pre= args[0];
 
-        if (!pre) return message.reply("<:error:946775591460421683> : Please mention a specific emoji for the Coins")
+        if (!pre) return message.reply("<:warning:1037486469620695100> : Please mention a specific emoji for the Coins")
         serverConfig.findOne(params, async (err, data) => {
             if (data) {
                 data.emote = pre

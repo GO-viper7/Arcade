@@ -7,14 +7,14 @@ module.exports = {
     description: "Sets the amount of time it takes between two messages to give the coins.",
     usage: "5s",
     run: async (client, message, args) => {
-        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:error:946775591460421683> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
+        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:warning:1037486469620695100> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
 
         const params = {
             guildId: message.guild.id
         }
 
         const pre = ms(args[0]);
-        if (!pre) return message.reply("<:error:946775591460421683> : Please mention a valid time limit")
+        if (!pre) return message.reply("<:warning:1037486469620695100> : Please mention a valid time limit")
         
         serverConfig.findOne(params, async (err, data) => {
             if (data) {

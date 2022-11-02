@@ -17,29 +17,29 @@ module.exports = {
             } else {
                 tBucks = config.coin;
             }
-            if (!data.gamblingChannel) return message.reply("<:error:946775591460421683> : There is no gambling channel set for this server. Please set one with \`setgamblingchannel\`.")
-            if (message.channel.id !== data.gamblingChannel) return message.reply(`<:error:946775591460421683> : You must be in the gambling channel to start a game of tic-tac-toe. (${client.channels.cache.get(data.gamblingChannel)})`)
+            if (!data.gamblingChannel) return message.reply("<:warning:1037486469620695100> : There is no gambling channel set for this server. Please set one with \`setgamblingchannel\`.")
+            if (message.channel.id !== data.gamblingChannel) return message.reply(`<:warning:1037486469620695100> : You must be in the gambling channel to start a game of tic-tac-toe. (${client.channels.cache.get(data.gamblingChannel)})`)
 
             const opponent = message.mentions.members.first()
             const amount = parseInt(args[1])
 
             if (!opponent) {
-                return message.reply("<:error:946775591460421683> : Please mention a user to play against.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : Please mention a user to play against.").catch((err) => { })
             }
             if (opponent.user.id === message.author.id) {
-                return message.reply("<:error:946775591460421683> : You can't play a game of tic-tac-toe against yourself.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You can't play a game of tic-tac-toe against yourself.").catch((err) => { })
             }
             if (opponent.user.bot) {
-                return message.reply("<:error:946775591460421683> : You cant play a game of tic-tac-toe against a bot.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You cant play a game of tic-tac-toe against a bot.").catch((err) => { })
             }
 
             const userBal = await economy.getCoins( message.author.id)
             const opponentBal = await economy.getCoins( opponent.user.id)
 
-            if (!amount) return message.reply(`<:error:946775591460421683> : Please specify an amount of ${tBucks} to bet.`).catch((err) => { })
-            if (isNaN(amount)) return message.reply(`<:error:946775591460421683> : Please specify a valid amount of ${tBucks} to bet.`).catch((err) => { })
-            if (amount > userBal) return message.reply(`<:error:946775591460421683> : You don't have enough ${tBucks} to bet that much.`).catch((err) => { })
-            if (amount > opponentBal) return message.reply(`<:error:946775591460421683> : That user doesn't have enough ${tBucks} to bet that much.`).catch((err) => { })
+            if (!amount) return message.reply(`<:warning:1037486469620695100> : Please specify an amount of ${tBucks} to bet.`).catch((err) => { })
+            if (isNaN(amount)) return message.reply(`<:warning:1037486469620695100> : Please specify a valid amount of ${tBucks} to bet.`).catch((err) => { })
+            if (amount > userBal) return message.reply(`<:warning:1037486469620695100> : You don't have enough ${tBucks} to bet that much.`).catch((err) => { })
+            if (amount > opponentBal) return message.reply(`<:warning:1037486469620695100> : That user doesn't have enough ${tBucks} to bet that much.`).catch((err) => { })
 
             xPlaying.add(message.author.id + message.id)
             xPlaying.add(opponent.user.id + message.id)

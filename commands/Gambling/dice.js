@@ -22,21 +22,21 @@ module.exports = {
             const opponent = message.mentions.members.first()
             const amount = args[1]
 
-            if (!opponent) return message.reply("<:error:946775591460421683> : Please mention a member to roll the dice with.")
+            if (!opponent) return message.reply("<:warning:1037486469620695100> : Please mention a member to roll the dice with.")
             if (opponent.user.id === message.author.id) {
-                return message.reply("<:error:946775591460421683> : You can't roll a die against yourself.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You can't roll a die against yourself.").catch((err) => { })
             }
             if (opponent.user.bot) {
-                return message.reply("<:error:946775591460421683> : You cant roll a die against a bot.").catch((err) => { })
+                return message.reply("<:warning:1037486469620695100> : You cant roll a die against a bot.").catch((err) => { })
             }
-            if (!amount) return message.reply("<:error:946775591460421683> : Please specify the amount to bet on this roll.")
-            if (isNaN(amount)) return message.reply("<:error:946775591460421683> : Please specify a valid amount to bet on this roll.")
+            if (!amount) return message.reply("<:warning:1037486469620695100> : Please specify the amount to bet on this roll.")
+            if (isNaN(amount)) return message.reply("<:warning:1037486469620695100> : Please specify a valid amount to bet on this roll.")
 
             const userBal = await economy.getCoins(message.author.id)
             const memberBal = await economy.getCoins(opponent.user.id)
 
-            if (amount > userBal) return message.reply(`<:error:946775591460421683> : You do not have enough ${tBucks} to bet on this roll.`)
-            if (amount > memberBal) return message.reply(`<:error:946775591460421683> : The member you mentioned does not have enough ${tBucks} to bet on this roll.`)
+            if (amount > userBal) return message.reply(`<:warning:1037486469620695100> : You do not have enough ${tBucks} to bet on this roll.`)
+            if (amount > memberBal) return message.reply(`<:warning:1037486469620695100> : The member you mentioned does not have enough ${tBucks} to bet on this roll.`)
 
             const inviterow = new MessageActionRow().addComponents(
                 new MessageButton()

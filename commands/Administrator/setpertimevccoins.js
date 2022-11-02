@@ -6,7 +6,7 @@ module.exports = {
     description: "Sets the amount of coins that can be earned per unit time.",
     usage: "<coin-name>",
     run: async (client, message, args) => {
-        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:error:946775591460421683> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
+        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:warning:1037486469620695100> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
 
         const params = {
             guildId: message.guild.id
@@ -14,7 +14,7 @@ module.exports = {
 
         const pre = args[0];
 
-        if (!pre) return message.reply("<:error:946775591460421683> : Please mention an amount for the per time VC coins.")
+        if (!pre) return message.reply("<:warning:1037486469620695100> : Please mention an amount for the per time VC coins.")
         serverConfig.findOne(params, async (err, data) => {
             if (data) {
                 data.pertimevccoins = pre

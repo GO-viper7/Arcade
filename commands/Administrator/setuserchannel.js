@@ -8,7 +8,7 @@ module.exports = {
     run: async (client, message, args) => {
         let tBucks;
 
-        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:error:946775591460421683> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
+        if (!message.member.permissions.has("ADMINISTRATOR")) return message.reply("<:warning:1037486469620695100> : You do not have the \`\`ADMINISTRATOR\`\` permission that is required to run this command.")
 
         const params = {
             guildId: message.guild.id
@@ -16,7 +16,7 @@ module.exports = {
 
         const channel = message.mentions.channels.first() || message.guild.channels.cache.get(args[0])
 
-        if (!channel) return message.reply("<:error:946775591460421683> : Please mention a channel or the channel ID to configure the user channel in.")
+        if (!channel) return message.reply("<:warning:1037486469620695100> : Please mention a channel or the channel ID to configure the user channel in.")
         serverConfig.findOne(params, async (err, data) => {
             if (data) {
                 tBucks = data.coin;
