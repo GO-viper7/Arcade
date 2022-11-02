@@ -352,12 +352,12 @@ module.exports = {
                         .addFields(
                             {
                                 name: `Categories:`,
-                                value: ` • Admin\n  • Bot\n  • Gambling \n  • User**`
+                                value: ` • Admin\n  • Bot\n  • Gambling \n  • User`
 
                             },
                             {
                                 name: `Links:`,
-                                value: `[Invite](https://discord.com/api/oauth2/authorize?client_id=921717832251756554&permissions=8&scope=bot%20applications.commands) | [YouTube](https://youtube.com/octagonemusic) | [GitHub](https://github.com/octagonemusic)`
+                                value: `[Twitter](https://twitter.com/LimboLabs_?s=20&t=qWzlQTES4iMtLAHyIsXRoA) | [Marketplace](https://marketplace77.herokuapp.com/) | [Support](https://discord.gg/vCCbRWAA)`
                             }
                         )
                         .setColor("FFFF00")
