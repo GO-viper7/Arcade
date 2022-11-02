@@ -55,7 +55,7 @@ client.on("ready", async () => {
                         console.log('giving rewards')
                         const embed = new Discord.MessageEmbed()
                         .setColor('#0099ff')
-                        .setTitle(`${elem.member.slice(0,elem.member.length-5)} earned 300 coins by liking the following tweet`)
+                        .setTitle(`${elem.member.slice(0,elem.member.length-5)} earned 300 coins by engaging with the following tweet`)
                         .setURL(`https://twitter.com/${x.user.screen_name}`)
                         
                         .setThumbnail(x.user.profile_image_url_https)
