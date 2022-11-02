@@ -352,7 +352,7 @@ module.exports = {
                         .addFields(
                             {
                                 name: `Categories:`,
-                                value: ` • Admin\n  • Bot\n  • Gambling \n  • User`
+                                value: ` • Admin\n  • Bot\n  • Gambling \n  • User**`
 
                             },
                             {
