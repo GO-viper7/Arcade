@@ -122,8 +122,8 @@ module.exports = {
                                 choiceRow.components[0].setStyle("PRIMARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("SECONDARY").setDisabled(true)
                                 await interaction.update({ embeds: [winEmbed], components: [choiceRow] })
-                                await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                                await economy.addCoins(message.guild.id, opponent.user.id, amount)
+                                await economy.addCoins(message.author.id, amount * -1)
+                                await economy.addCoins(opponent.user.id, amount)
 
                             } else if (outcome === "tails") {
                                 const loseEmbed = new MessageEmbed()
@@ -136,8 +136,8 @@ module.exports = {
                                 choiceRow.components[0].setStyle("PRIMARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("SECONDARY").setDisabled(true)
                                 await interaction.update({ embeds: [loseEmbed], components: [choiceRow] })
-                                await economy.addCoins(message.guild.id, message.author.id, amount)
-                                await economy.addCoins(message.guild.id, opponent.user.id, amount * -1)
+                                await economy.addCoins(message.author.id, amount)
+                                await economy.addCoins(opponent.user.id, amount * -1)
 
                             }
                         } else if (interaction.customId === "tails") {
@@ -152,8 +152,8 @@ module.exports = {
                                 choiceRow.components[0].setStyle("SECONDARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("PRIMARY").setDisabled(true)
                                 await interaction.update({ embeds: [winEmbed], components: [choiceRow] })
-                                await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                                await economy.addCoins(message.guild.id, opponent.user.id, amount)
+                                await economy.addCoins(message.author.id, amount * -1)
+                                await economy.addCoins(opponent.user.id, amount)
 
                             } else if (outcome === "heads") {
                                 const loseEmbed = new MessageEmbed()
@@ -166,8 +166,8 @@ module.exports = {
                                 choiceRow.components[0].setStyle("SECONDARY").setDisabled(true)
                                 choiceRow.components[1].setStyle("PRIMARY").setDisabled(true)
                                 await interaction.update({ embeds: [loseEmbed], components: [choiceRow] })
-                                await economy.addCoins(message.guild.id, message.author.id, amount)
-                                await economy.addCoins(message.guild.id, opponent.user.id, amount * -1)
+                                await economy.addCoins(message.author.id, amount)
+                                await economy.addCoins(opponent.user.id, amount * -1)
 
                             }
                         }

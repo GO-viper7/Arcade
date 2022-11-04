@@ -117,8 +117,8 @@ module.exports = {
                         await inviterow.components[0].setDisabled(true)
                         await inviterow.components[1].setDisabled(true)
                         await inviteCollector.stop()
-                        await economy.addCoins(message.guild.id, message.author.id, amount)
-                        await economy.addCoins(message.guild.id, opponent.user.id, amount * -1)
+                        await economy.addCoins(message.author.id, amount)
+                        await economy.addCoins(opponent.user.id, amount * -1)
                         await interaction.update({ embeds: [winEmbed], components: [inviterow] })
                     } else if (die2 > die1) {
                         const loseEmbed = new MessageEmbed()
@@ -153,8 +153,8 @@ module.exports = {
                         await inviterow.components[0].setDisabled(true)
                         await inviterow.components[1].setDisabled(true)
                         await inviteCollector.stop()
-                        await economy.addCoins(message.guild.id, message.author.id, amount * -1)
-                        await economy.addCoins(message.guild.id, opponent.user.id, amount)
+                        await economy.addCoins(message.author.id, amount * -1)
+                        await economy.addCoins(opponent.user.id, amount)
                         await interaction.update({ embeds: [loseEmbed], components: [inviterow] })
                     } else if (die1 = die2) {
                         await inviteCollector.stop()

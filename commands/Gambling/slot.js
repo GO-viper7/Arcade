@@ -44,7 +44,7 @@ module.exports = {
                                 .setTimestamp()
                                 .setFooter({ text: `Powered by Limbo Labs` })
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * 10)
+                            await economy.addCoins(message.author.id, args[0] * 10)
                             message.reply({ embeds: [jackpotEmbed] })
                         } else {
                             const winnerEmbed = new MessageEmbed()
@@ -55,7 +55,7 @@ module.exports = {
                                 .setTimestamp()
                                 .setFooter({ text: `Powered by Limbo Labs` })
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * 2)
+                            await economy.addCoins(message.author.id, args[0] * 2)
                             message.reply({ embeds: [winnerEmbed] })
                         }
                     } else if (selection_1 === selection_2 && selection_2 !== selection_3) {
@@ -67,7 +67,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 !== selection_2 && selection_2 === selection_3) {
                         const winnerEmbed = new MessageEmbed()
@@ -78,7 +78,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 === selection_3 && selection_3 !== selection_2) {
                         const winnerEmbed = new MessageEmbed()
@@ -89,7 +89,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 !== selection_2 && selection_2 !== selection_3) {
                         const loserEmbed = new MessageEmbed()
@@ -100,7 +100,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                        await economy.addCoins(message.author.id, args[0] * -1)
                         message.reply({ embeds: [loserEmbed] })
                     }
                 } else {
@@ -133,7 +133,7 @@ module.exports = {
                                 .setTimestamp()
                                 .setFooter({ text: `Powered by Limbo Labs` })
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * 10)
+                            await economy.addCoins(message.author.id, args[0] * 10)
                             message.reply({ embeds: [jackpotEmbed] })
                         } else {
                             const winnerEmbed = new MessageEmbed()
@@ -144,7 +144,7 @@ module.exports = {
                                 .setTimestamp()
                                 .setFooter({ text: `Powered by Limbo Labs` })
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * 2)
+                            await economy.addCoins(message.author.id, args[0] * 2)
                             message.reply({ embeds: [winnerEmbed] })
                         }
                     } else if (selection_1 === selection_2 && selection_2 !== selection_3) {
@@ -156,7 +156,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 !== selection_2 && selection_2 === selection_3) {
                         const winnerEmbed = new MessageEmbed()
@@ -167,7 +167,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 === selection_3 && selection_3 !== selection_2) {
                         const winnerEmbed = new MessageEmbed()
@@ -178,7 +178,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         message.reply({ embeds: [winnerEmbed] })
                     } else if (selection_1 !== selection_2 && selection_2 !== selection_3) {
                         const loserEmbed = new MessageEmbed()
@@ -189,7 +189,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                        await economy.addCoins(message.author.id, args[0] * -1)
                         message.reply({ embeds: [loserEmbed] })
                     }
                 }
@@ -224,7 +224,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * 10)
+                        await economy.addCoins(message.author.id, args[0] * 10)
                         message.reply({ embeds: [jackpotEmbed] })
                     } else {
                         const winnerEmbed = new MessageEmbed()
@@ -235,7 +235,7 @@ module.exports = {
                             .setTimestamp()
                             .setFooter({ text: `Powered by Limbo Labs` })
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * 2)
+                        await economy.addCoins(message.author.id, args[0] * 2)
                         message.reply({ embeds: [winnerEmbed] })
                     }
                 } else if (selection_1 === selection_2 && selection_2 !== selection_3) {
@@ -247,7 +247,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter({ text: `Powered by Limbo Labs` })
 
-                    await economy.addCoins(message.guild.id, message.author.id, args[0])
+                    await economy.addCoins(message.author.id, args[0])
                     message.reply({ embeds: [winnerEmbed] })
                 } else if (selection_1 !== selection_2 && selection_2 === selection_3) {
                     const winnerEmbed = new MessageEmbed()
@@ -258,7 +258,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter({ text: `Powered by Limbo Labs` })
 
-                    await economy.addCoins(message.guild.id, message.author.id, args[0])
+                    await economy.addCoins(message.author.id, args[0])
                     message.reply({ embeds: [winnerEmbed] })
                 } else if (selection_1 === selection_3 && selection_3 !== selection_2) {
                     const winnerEmbed = new MessageEmbed()
@@ -269,7 +269,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter({ text: `Powered by Limbo Labs` })
 
-                    await economy.addCoins(message.guild.id, message.author.id, args[0])
+                    await economy.addCoins(message.author.id, args[0])
                     message.reply({ embeds: [winnerEmbed] })
                 } else if (selection_1 !== selection_2 && selection_2 !== selection_3) {
                     const loserEmbed = new MessageEmbed()
@@ -280,7 +280,7 @@ module.exports = {
                         .setTimestamp()
                         .setFooter({ text: `Powered by Limbo Labs` })
 
-                    await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                    await economy.addCoins(message.author.id, args[0] * -1)
                     message.reply({ embeds: [loserEmbed] })
                 }
             }

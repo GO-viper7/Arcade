@@ -104,7 +104,7 @@ module.exports = {
                         }
 
                         if (userChoice === "rock" && botChoice === "scissors") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose scissors!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("PRIMARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -114,7 +114,7 @@ module.exports = {
                         }
 
                         if (userChoice === "paper" && botChoice === "rock") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose rock!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -124,7 +124,7 @@ module.exports = {
                         }
 
                         if (userChoice === "scissors" && botChoice === "paper") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose paper!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -135,7 +135,7 @@ module.exports = {
 
                         if (userChoice === "rock" && botChoice === "paper") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose paper!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("PRIMARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -147,7 +147,7 @@ module.exports = {
 
                         if (userChoice === "paper" && botChoice === "scissors") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose scissors!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -158,7 +158,7 @@ module.exports = {
 
                         if (userChoice === "scissors" && botChoice === "rock") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose rock!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -258,7 +258,7 @@ module.exports = {
                         }
 
                         if (userChoice === "rock" && botChoice === "scissors") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose scissors!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("PRIMARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -268,7 +268,7 @@ module.exports = {
                         }
 
                         if (userChoice === "paper" && botChoice === "rock") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose rock!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -278,7 +278,7 @@ module.exports = {
                         }
 
                         if (userChoice === "scissors" && botChoice === "paper") {
-                            await economy.addCoins(message.guild.id, message.author.id, args[0])
+                            await economy.addCoins(message.author.id, args[0])
                             embed.setDescription(`${message.author.tag} won! I chose paper!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -289,7 +289,7 @@ module.exports = {
 
                         if (userChoice === "rock" && botChoice === "paper") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose paper!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("PRIMARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -301,7 +301,7 @@ module.exports = {
 
                         if (userChoice === "paper" && botChoice === "scissors") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose scissors!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -312,7 +312,7 @@ module.exports = {
 
                         if (userChoice === "scissors" && botChoice === "rock") {
 
-                            await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                            await economy.addCoins(message.author.id, args[0] * -1)
                             embed.setDescription(`${message.author.tag} lost! I chose rock!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                             row.components[0].setDisabled(true).setStyle("SECONDARY")
                             row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -413,7 +413,7 @@ module.exports = {
                     }
 
                     if (userChoice === "rock" && botChoice === "scissors") {
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         embed.setDescription(`${message.author.tag} won! I chose scissors!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("PRIMARY")
                         row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -423,7 +423,7 @@ module.exports = {
                     }
 
                     if (userChoice === "paper" && botChoice === "rock") {
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         embed.setDescription(`${message.author.tag} won! I chose rock!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("SECONDARY")
                         row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -433,7 +433,7 @@ module.exports = {
                     }
 
                     if (userChoice === "scissors" && botChoice === "paper") {
-                        await economy.addCoins(message.guild.id, message.author.id, args[0])
+                        await economy.addCoins(message.author.id, args[0])
                         embed.setDescription(`${message.author.tag} won! I chose paper!\n\nAmount won: ${data.emote || config.emote}\`${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("SECONDARY")
                         row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -444,7 +444,7 @@ module.exports = {
 
                     if (userChoice === "rock" && botChoice === "paper") {
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                        await economy.addCoins(message.author.id, args[0] * -1)
                         embed.setDescription(`${message.author.tag} lost! I chose paper!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("PRIMARY")
                         row.components[1].setDisabled(true).setStyle("SECONDARY")
@@ -456,7 +456,7 @@ module.exports = {
 
                     if (userChoice === "paper" && botChoice === "scissors") {
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                        await economy.addCoins(message.author.id, args[0] * -1)
                         embed.setDescription(`${message.author.tag} lost! I chose scissors!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("SECONDARY")
                         row.components[1].setDisabled(true).setStyle("PRIMARY")
@@ -467,7 +467,7 @@ module.exports = {
 
                     if (userChoice === "scissors" && botChoice === "rock") {
 
-                        await economy.addCoins(message.guild.id, message.author.id, args[0] * -1)
+                        await economy.addCoins(message.author.id, args[0] * -1)
                         embed.setDescription(`${message.author.tag} lost! I chose rock!\n\nAmount lost: ${data.emote || config.emote}\`-${args[0]} ${tBucks}\``)
                         row.components[0].setDisabled(true).setStyle("SECONDARY")
                         row.components[1].setDisabled(true).setStyle("SECONDARY")

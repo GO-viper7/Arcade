@@ -86,7 +86,7 @@ module.exports = {
                             if (selection === a.toLowerCase()) {
                                 message.channel.send({ content: `${msg.author} got it right! Their account has been deposited with  <:Coins:946757996166389810> \`${amount}\` ${tBucks}!` })
                                 gameCollector.stop()
-                                economy.addCoins(message.guild.id, msg.author.id, amount)
+                                economy.addCoins(msg.author.id, amount)
                                 isPlaying.delete(message.channel.id)
                             } else if (selection === "stop") {
                                 message.channel.send(`The correct answer was ${a}`)

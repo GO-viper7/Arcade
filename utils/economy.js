@@ -5,15 +5,13 @@ const coinsCache = {}
 
 module.exports = (client) => { }
 
-module.exports.addCoins = async (guildId, userId, OctaCreds) => {
+module.exports.addCoins = async (userId, OctaCreds) => {
 
     const result = await profileSchema.findOneAndUpdate(
         {
-            guildId,
             userId,
         },
         {
-            guildId,
             userId,
             $inc: {
                 OctaCreds,
@@ -25,7 +23,7 @@ module.exports.addCoins = async (guildId, userId, OctaCreds) => {
         }
     )
 
-    coinsCache[`${guildId}-${userId}`] = result.OctaCreds
+    coinsCache[`${userId}`] = result.OctaCreds
 
     return result.OctaCreds
 } 

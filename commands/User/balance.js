@@ -6,7 +6,7 @@ const config = require('../../config.json')
 module.exports = {
     name: 'balance',
     description: "Shows yours or the mentioned member's balance.",
-    aliases: ['bal'],
+    aliases: ['bal', 'scrap'],
     usage: "<member>",
     run: async (client, message, args) => {
         let tBucks;

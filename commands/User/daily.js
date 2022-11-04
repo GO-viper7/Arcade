@@ -24,7 +24,7 @@ module.exports = {
                     amount = randomNumber(200, 400)
                 }
 
-                economy.addCoins(message.guild.id, message.author.id, amount)
+                economy.addCoins(message.author.id, amount)
 
                 return message.reply(`You received your daily ${tBucks}!\n\n${data.emote || config.emote} \`${amount} ${tBucks}\``)
             } else {
@@ -39,7 +39,7 @@ module.exports = {
 
                 const amount = randomNumber(200, 400)
 
-                economy.addCoins(message.guild.id, message.author.id, amount)
+                economy.addCoins(message.author.id, amount)
 
                 return message.reply(`You received your daily ${tBucks}!\n\n${data.emote || config.emote} \`${amount} ${tBucks}\``)
             }

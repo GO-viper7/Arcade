@@ -26,7 +26,7 @@ client.on("messageCreate", async (message) => {
                 Timeout.delete(`throw ${userId}`)
             }, timeout)
             const chatCoins = data.chatCoins
-            await economy.addCoins(guildId, userId, chatCoins)
+            await economy.addCoins(userId, chatCoins)
         }
     })
 })

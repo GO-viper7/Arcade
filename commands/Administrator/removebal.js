@@ -25,7 +25,7 @@ module.exports = {
         if (!amount) return message.reply(`Please specify an amount of ${tBucks} to add to this user.`);
         if (isNaN(amount)) return message.reply(`Please specify a valid amount of ${tBucks} to add to this user.`);
 
-        await economy.addCoins(message.guild.id, member.user.id, amount * -1)
+        await economy.addCoins(member.user.id, amount * -1)
 
         const embed = new MessageEmbed()
             .setAuthor({ name: member.user.tag, iconURL: member.user.displayAvatarURL({ dynamic: true }) })

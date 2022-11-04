@@ -85,7 +85,7 @@ client.on("ready", async () => {
                             channel.send({ content: `${msg.author} got it right! Their account has been deposited with  ${data.emote || config.emote} \`${amount}\` ${tBucks}!` })
                             await isAnswered.delete(initial.id)
                             gameCollector.stop()
-                            economy.addCoins(guildId, msg.author.id, amount)
+                            economy.addCoins(msg.author.id, amount)
                         } else if (i <= maxAttempts && selection !== a.toLowerCase() && selection !== "stop" && i > 0) {
                             i--;
                         } else if (i <= 0 && selection !== a.toLowerCase()) {

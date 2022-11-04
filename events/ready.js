@@ -72,7 +72,7 @@ client.on("ready", async () => {
                         .setTimestamp('timestamp')
                         //console.log(client.channels)
                         client.channels.cache.get(config.channelId).send({content: `<@${elem.userId}>`, embeds: [embed]});
-                        await economy.addCoins(elem.guildId, elem.userId, 300)
+                        await economy.addCoins(elem.userId, 300)
                        
                         await new likeSchema({
                           tweetId: x.id,

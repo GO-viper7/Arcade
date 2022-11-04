@@ -21,18 +21,18 @@ client.on('voiceStateUpdate', async (oldState, newState) => {
                     const coinstobeadded = Math.round(parseInt(data.minvccoins) + parseInt(lmao * data.pertimevccoins))
                     console.log(coinstobeadded)
                     joined.delete(oldState.member.id)
-                    await economy.addCoins(oldState.guild.id, oldState.member.id, coinstobeadded)
+                    await economy.addCoins(oldState.member.id, coinstobeadded)
                 } else {
                     const lmao = (timeinvc - data.minvctime) / (data.pertimevctime)
                     if (lmao < 1) {
-                        await economy.addCoins(oldState.guild.id, oldState.member.id, data.minvccoins)
+                        await economy.addCoins(oldState.member.id, data.minvccoins)
                         joined.delete(oldState.member.id)
                     } else if (lmao >= 1) {
                         const lol = Math.round(lmao)
                         const coinstobeadded = Math.round(parseInt(data.minvccoins) + parseInt(data.pertimevccoins * lol))
                         console.log(coinstobeadded)
                         joined.delete(oldState.member.id)
-                        await economy.addCoins(oldState.guild.id, oldState.member.id, coinstobeadded)
+                        await economy.addCoins(oldState.member.id, coinstobeadded)
                     }
                 }
             }
