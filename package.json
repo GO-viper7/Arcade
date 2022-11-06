@@ -43,6 +43,7 @@
     "promisify": "^0.0.3",
     "socket.io": "^4.4.1",
     "something-random-on-discord": "^3.4.4",
+    "statcord.js": "^3.4.3",
     "twemoji-parser": "^13.1.0",
     "twit": "^2.2.11",
     "twitter": "^1.7.1",

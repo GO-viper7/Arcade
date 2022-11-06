@@ -40,7 +40,7 @@ module.exports = {
                 data.token = args[0]
                 
                 await twitterSchema.findOneAndUpdate({ userId: message.author.id }, data)
-                return message.reply({ content: `**Twitter account** has been successfully udated and set to **${tweets.screen_name}**` });
+                return message.reply({ content: `**Twitter account** has been successfully changed and set to **${tweets.screen_name}**` });
               } else {
                 new twitterSchema({
                   userId: message.author.id,

@@ -4,6 +4,17 @@ const ms = require("ms")
 const Timeout = new Collection()
 const serverConfig = require("../schemas/server-config");
 const profileSchema = require("../schemas/profile-schema");
+const Statcord = require("statcord.js");
+const config = require("../config.json")
+
+const statcord = new Statcord.Client({
+  client,
+  key: config.statcord,
+  postCpuStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+  postMemStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+  postNetworkStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+});
+
 
 client.on("messageCreate", async (message) => {
 
@@ -48,6 +59,8 @@ client.on("messageCreate", async (message) => {
         let command = client.commands.get(cmd.toLowerCase());
 
         if (!command) command = client.commands.get(client.aliases.get(cmd.toLowerCase()))
+        statcord.postCommand(command.name, message.author.id);
+
         if (command) {
           if (command.timeout) {
             if (Timeout.has(`${command.name}${message.author.id}`)) return message.channel.send(`You are on a \`${ms(Timeout.get(`${command.name}${message.author.id}`) - Date.now(), { long: true })}\` cooldown.`)

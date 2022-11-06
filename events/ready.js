@@ -8,8 +8,20 @@ const economy = require('../utils/economy')
 const invites = new Discord.Collection();
 const roleSchema = require('../schemas/role-schema')
 const likeSchema = require('../schemas/like-schema')
-client.on("ready", async () => {
+const Statcord = require("statcord.js");
 
+
+const statcord = new Statcord.Client({
+  client,
+  key: config.statcord,
+  postCpuStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+  postMemStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+  postNetworkStatistics: false, /* Whether to post memory statistics or not, defaults to true */
+});
+
+
+client.on("ready", async () => {
+    statcord.autopost();
     const arrayOfStatus = [
         `Bot's still in Testing`
     ];
@@ -99,3 +111,15 @@ client.on("ready", async () => {
   }, 60000)
     
 })
+
+statcord.on("autopost-start", () => {
+  // Emitted when statcord autopost starts
+  console.log("Started autopost");
+});
+
+statcord.on("post", status => {
+  // status = false if the post was successful
+  // status = "Error message" or status = Error if there was an error
+  if (!status) console.log("Successful post");
+  else console.error(status);
+});
